@@ -4,7 +4,7 @@
 Ecrire un algorithme permettant de compter le nombre de caractères 
 contenus dans cette phrase</p>
 
-<h2>Résultat</h2>
+<h2>Résultat exo 1</h2>
 
 <?php
 
