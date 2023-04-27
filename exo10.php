@@ -1,29 +1,40 @@
-<h1>Exercice 10</h1>
-<p>A partir d’un montant à payer et d’une somme versée pour régler un achat, écrire l’algorithme qui
-affiche à un utilisateur un rendu de monnaie en nombre de billets de 10 € et 5 €, de pièces de 2 € et
-1 €.
-</p>
+<!DOCTYPE html>
+<html lang="en">
 
-<?php
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 10</title>
+</head>
 
-$apayer = 152;
-$verse = 200;
-$reste = $verse - $apayer;
-echo "Montant à payer : $apayer €<br>";
-echo "Motant versé : $verse €<br>";
-echo "Reste à payer : $reste €<br>";
+<body>
+    <h1>Exercice 10 - Calcul de rendu de monnaie</h1>
 
-$cinq = $reste % 10;
-$deux =  $cinq % 5;
-$un = $deux % 2;
+    <?php
+    // Déclaration des variables
+    $apayer = 152;
+    $verse = 200;
+    $reste = $verse - $apayer;
 
+    // Affichage des montants
+    echo "Montant à payer : $apayer €<br>";
+    echo "Montant versé : $verse €<br>";
+    echo "Reste à payer : $reste €<br>";
 
-echo "***************************************************<br>";
-echo "Rendu de monnaie :<br>";
+    // Calcul du rendu de monnaie
+    $cinq = $reste % 10;
+    $deux =  $cinq % 5;
+    $un = $deux % 2;
 
-    echo "". floor($reste / 10) ." billets de 10 € - "; //arrondie à l'entier inférieur
+    // Affichage du rendu de monnaie
+    echo "***************************************************<br>";
+    echo "Rendu de monnaie :<br>";
+    echo "". floor($reste / 10) ." billets de 10 € - "; // floor() : arrondie à l'entier inférieur
     echo "". floor($cinq / 5) ." billets de 5 € - ";
     echo "". floor($deux / 2) ." pièces de 2 € - ";
     echo "". floor($un) ." pièces de 1 € ";
+    ?>
+</body>
 
-?>
+</html>

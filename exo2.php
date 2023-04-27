@@ -1,18 +1,30 @@
-<h1>Exercice 2</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<p>A partir de la phrase de l’exercice 1, écrire l’instruction permettant de compter le nombre de mots
-contenus dans celle-ci.</p>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 2</title>
+</head>
 
-<?php
+<body>
 
-$mot = str_word_count($phrase); //nom de mot
+    <h1>Exercice 2</h1>
+    <p>A partir de la phrase de l’exercice 1, écrire l’instruction permettant de compter le nombre de mots
+        contenus dans celle-ci.</p>
 
-if ($mot == "1") 
-{
-    echo "La phrase « $phrase » contient $mot mot<br>";
-}
-else {
-    echo "La phrase « $phrase » contient $mot mots<br>";
-    }
+    <?php
+    // Déclaration de la chaîne de caractères à analyser
+    $str = "Notre formation DL commence aujourd'hui";
 
-?>
+    //La fonction str_word_count() sert à compter le nombre de mots dans une chaîne de caractères.
+    // Comptage du nombre de mots avec la fonction str_word_count()
+    $nbMotsStr = str_word_count($str);
+
+    // Affichage du résultat à l'écran avec la fonction echo()
+    echo "La phrase « $str » contient $nbMotsStr mots<br>";
+    ?>
+</body>
+
+</html>
